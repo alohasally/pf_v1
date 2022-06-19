@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sally's homepage</title>
+    <!-- font & icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://your_path_to_version_6_files/css/all.css" >
+    
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" type="text/css">  
+    <link rel="stylesheet" href="css/common.css" type="text/css"> 
+    <link rel="stylesheet" href="css/header.css" type="text/css"> 
+    <link rel="stylesheet" href="css/title.css" type="text/css"> 
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/aside.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>   
+<script src="js/header.js" type="text/javascript"></script>
+<script src="js/aside.js" type="text/javascript"></script>
+<script src="js/about.js" type="text/javascript"></script>
+<script src="js/about2.js" type="text/javascript"></script>
+<script>
+    $(document).ready(
+       function(){
+           // 서브메뉴 표시(햄버거버튼)
+           $("header .wrap a.allmenu").click(function(){
+               // x변환
+               $(this).toggleClass("x");
+               // 대메뉴등장
+               $("header .wrap ul.gnb").toggleClass("moveShow");
+               return false;
+              });
+       });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var sc1gal_num = 0, sc1gal_txt = '', sc1gal_link =''
+		$(".btn_sc1_gal").on("click", function(){
+        $("body").addClass("popon");
+        sc1gal_num = $(this).data("galnum");
+        sc1gal_txt = $(this).data("galtxt");
+        sc1gal_link = $(this).data("gallink");
+        $(".pop_sc1gal, .pop_sc1gal_inner").scrollTop(0);
+        $(".pop_sc1gal_inner").removeClass("on1 on2 on3 on4 on5 on6 on7 on8 on9 on10").addClass("on" + sc1gal_num);
+        $(".pop_sc1gal_img").attr("src", "./img/gal_detail" + sc1gal_num + ".gif");
+        $(".pop_sc1gal_txt").html(sc1gal_txt);
+        $(".pop_sc1gal_link").attr("href","https://alohasally.github.io/pf"+ sc1gal_link).text("사이트보러가기 > ");
+        $(".pop_sc1gal").stop().fadeIn(500);
+        });
+        $(".btn1gal_close, .btn_sc1gal_close_dim").on("click", function(){
+			$("body").removeClass("popon");
+			$(".pop_sc1gal").stop().fadeOut(500);
+		});
+    });
+</script>
+
+</head>
+<!--  -->
+<body>
+    <!-- 상단영역 -->
+   
+
+    <header>
+        <div class="wrap">
+           <a href="../index.html" class="home" target="_blank"> <h1 class="rasally">RASALLY</h1></a>
+            <ul class="gnb">
+                <li><a href="../index.html" class="work">HOME</a></li>
+                <li><a href="./work.html" class="portfolio">WORKS</a></li>
+                <li><a href="./about.html" class="about">ABOUT ME</a></li>
+                <li><a href="./contact.html" class="contact">CONTACT</a></li>
+            </ul>
+        </div>   
+    </header>
+
+
+    <!-- 내용영역 -->
+   
+    <main>
+       
+        <section id="portfolio" class="sc1">
+            <div class="wrap_1 sc1_inner">
+                <h2 class="h2">UI/UX Portfolio</h2>
+                <!-- <p class="sc1_txt scr on animate__animated animate__fadeInDown">
+                가상세계에서 </p><br>
+                <p class="sc1_txt scr on animate__animated animate__slideInRight">
+                공간을 아름답게 </p><br>
+                <p class="sc1_txt scr on animate__animated animate__slideInLeft">
+                설계하고 구축합니다</p><br> -->
+                <strong class="typing-text">가상세계에서 공간을 아름답게 설계하고 구축합니다</strong>
+                <div class="sc1_gal_wrap">
+                <ul class="sc1_gal_list sc1_gal_l">
+                    <li class="sc1_gal scr_rp gal_l1">
+                        <h3>01/</h3>
+                        <p>한진그룹 Hanjin</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="1" data-galtxt="[한진그룹 Hanjin]" data-gallink="1" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" >
+                        <img class="sc1_gal_img" src="./img/gal_l1.jpg" alt="">
+                        
+                    </li>
+                    <li class="sc1_gal scr_rp gal_l2">
+                        <h3>03/</h3>
+                        <p>삼성전자 SAMSUNG</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="3" data-galtxt="[삼성전자 SAMSUNG]" data-gallink="3" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" >
+                        <img class="sc1_gal_img" src="./img/gal_l2.jpg" alt="">
+                    </li>
+                    <li class="sc1_gal scr_rp gal_l3">
+                        <h3>05/</h3>
+                        <p>윤현몰 YOONHYUNMALL</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="5" data-galtxt="[윤현몰 YOONHYUNMALL]" data-gallink="5" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_l3.jpg" alt="">
+                    </li>
+                    <li class="sc1_gal scr_rp gal_l4">
+                        <h3>07/</h3>
+                        <p>제주항공 JEJUAIR</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="7" data-galtxt="[제주항공 JEJUAIR]" data-gallink="7" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_l3.jpg" alt="">
+                    </li>
+                    <li class="sc1_gal scr_rp gal_l5">
+                        <h3>09/</h3>
+                        <p>마몽드 MAMOND</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="9" data-galtxt="[마몽드 MAMOND]" data-gallink="9" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_l3.jpg" alt="">
+                    </li>
+                 
+                </ul>
+                <ul class="sc1_gal_list sc1_gal_r">
+                    <li class="sc1_gal scr_rp gal_r1">
+                        <h3>02/</h3>
+                        <p>투썸플레이스 TWOSOME PLACE</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="2" data-galtxt="[투썸플레이스 TWOSOME PLACE]" data-gallink="2" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_r1.jpg" alt="">
+                    </li>
+                    <li class="sc1_gal scr_rp gal_r2">
+                        <h3>04/</h3>
+                        <p>브랜드엑스 BRANDX</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="4" data-galtxt="[브랜드엑스 BRANDX]" data-gallink="4" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_r2.jpg" alt="">
+                    </li>
+                 
+                    <li class="sc1_gal scr_rp gal_r3">
+                        <h3>06/</h3>
+                        <p>한진그룹리뉴얼 RENEWAL</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="6" data-galtxt="[한진그룹리뉴얼 RENEWAL]" data-gallink="6" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_r3.jpg" alt="">
+                    </li>
+                  
+                    <li class="sc1_gal scr_rp gal_r4">
+                        <h3>08/</h3>
+                        <p>스타벅스 STARBUCKS</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="8" data-galtxt="[스타벅스 STARBUCKS]" data-gallink="8" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_l3.jpg" alt="">
+                    </li>
+                   
+                    <li class="sc1_gal scr_rp gal_r5">
+                        <h3>10/</h3>
+                        <p>일룸 ILOOM</p>
+                       <button class="btn_sc1_gal gtag" type="button" data-galnum="10" data-galtxt="[일룸 ILOOM]" data-gallink="10" data-cat="클릭 - gallery" data-act="클릭 - gallery -2" data="">
+                        <img class="sc1_gal_img" src="./img/gal_l3.jpg" alt="">
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+
+    <!-- aside -->
+    
+    <aside class="right">
+        <a href="" class="top">맨위로 가기</a>
+    </aside>
+
+
+    <!-- 하단영역 -->
+    <footer>
+        <div class="wrap">
+            <ul class="local">
+                <li>
+                    <h2 class="h5">Location</h2>
+                    <p class="p">time weather</p>
+                </li>
+                <li>
+                    <h2 class="h5">Date</h2>
+                    <p class="p">2022.Mar.27</p>
+                </li>
+            </ul>
+            <div class="right">
+                <ul class="sns">
+                    <li><a href="">인스타그램</a></li>
+                    <li><a href="">유튜브</a></li>
+                    <li><a href="">핀터레스트</a></li>
+                </ul>
+            </div>
+            <p>Copyright ©2022 Rasally All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        (function(w, d, a){
+			w.__beusablerumclient__ = {
+				load : function(src){
+					var b = d.createElement("script");
+					b.src = src; b.async=true; b.type = "text/javascript";
+					d.getElementsByTagName("head")[0].appendChild(b);
+				}
+			};w.__beusablerumclient__.load(a);
+		})(window, document, "//rum.beusable.net/script/b201015e141919u216/9cb88fdd0d");
+		(function(w, d, a){
+			w.__beusablerumclient__ = {
+				load : function(src){
+					var b = d.createElement("script");
+					b.src = src; b.async=true; b.type = "text/javascript";
+					d.getElementsByTagName("head")[0].appendChild(b);
+				}
+			};w.__beusablerumclient__.load(a);
+		})(window, document, '//rum.beusable.net/script/b191227e101340u465/9a08aaecd1');
+	</script>
+
+    <div class="pop_sc1gal" >
+        <button class="btn1gal" type="button"></button>
+        <div class="pop_sc1gal_inner">
+            <button class="btn1gal_close" type="button">
+              <img src="./img/btn_close.png" alt="">
+            </button>
+            <img src="" alt="" class="pop_sc1gal_img">
+            <p class="pop_sc1gal_txt"></p>
+            <a href="" class="pop_sc1gal_link"></a>
+        </div>
+    </div>
+</body>
+</html>
